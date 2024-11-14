@@ -7,6 +7,30 @@ body {
     margin: 0;
     background-color: #f5f5f5;
     text-align: center;
+
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100vh; /* Ensures full vertical space */
+    justify-content: center; /* Centers content vertically as well */
+}
+
+/* Centers all text inside the body */
+h1, #inspirationText, #activityIdea, button {
+    text-align: center;
+    width: 100%; /* Ensures the text aligns within the full width of the container */
+    max-width: 1000px; /* Optionally, you can limit text width for better readability */
+}
+
+/* Ensure buttons are centered */
+button {
+    display: block;
+    margin: 10px auto; /* Adds spacing and centers the button */
+}
 }
 
 h1 {
