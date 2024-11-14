@@ -59,10 +59,10 @@ p {
 
 /* Headline font */
 h1 {
-    font-family: "Cooper BT", sans-serif;
+    font-family: soap, sans-serif;
 }
 
 /* Body text font */
 body, #inspirationText, #activityIdea, button {
-    font-family: "ITC Franklin Gothic LT", sans-serif;
+    font-family: forma-djr-micro, sans-serif;
 }
