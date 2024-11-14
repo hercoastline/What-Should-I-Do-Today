@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 2em;
     color: #333;
     margin-bottom: 20px;
 }
@@ -68,7 +68,7 @@ body, #inspirationText, #activityIdea, button {
 }
 
 body {
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 0 auto; /* Centers the content on larger screens */
     padding: 0 20px; /* Adds a little padding on smaller screens */
 }
