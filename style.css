@@ -66,3 +66,9 @@ h1 {
 body, #inspirationText, #activityIdea, button {
     font-family: forma-djr-micro, sans-serif;
 }
+
+body {
+    max-width: 1500px;
+    margin: 0 auto; /* Centers the content on larger screens */
+    padding: 0 20px; /* Adds a little padding on smaller screens */
+}
