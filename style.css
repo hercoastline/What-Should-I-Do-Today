@@ -98,3 +98,10 @@ body {
     margin: 0 auto; /* Centers the content on larger screens */
     padding: 0 20px; /* Adds a little padding on smaller screens */
 }
+
+hr {
+    border: none; /* Removes default styling */
+    border-top: 1px solid #ccc; /* Creates a subtle line */
+    width: 80%; /* Adjusts the width of the line */
+    margin: 20px auto; /* Centers the line and adds space */
+}
