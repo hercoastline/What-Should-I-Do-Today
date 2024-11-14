@@ -20,7 +20,7 @@ const activityIdea = document.getElementById("activityIdea");
 function displayNewIdea() {
     const randomIdea = activities[Math.floor(Math.random() * activities.length)];
     activityIdea.textContent = randomIdea;
-    button.textContent = "Not today, thank you, give me another idea";
+    button.textContent = "Not today, give me another idea";
 }
 
 // Add a click event to the button
