@@ -73,14 +73,14 @@ p {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-    background-color: #ff6347; /* Feel free to change this color */
+    background-color: #d9b9a7; /* Feel free to change this color */
     color: #fff;
     border: none;
     border-radius: 5px;
 }
 
 #followButton:hover {
-    background-color: #e5533d; /* Slightly darker shade for hover */
+    background-color: #b48b75; /* Slightly darker shade for hover */
 }
 
 /* Headline font */
