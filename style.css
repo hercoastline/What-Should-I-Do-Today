@@ -3,7 +3,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: forma-djr-micro, sans-serif;
     height: 100vh;
     margin: 0;
     background-color: #f5f5f5;
@@ -13,7 +12,6 @@ h1 {
     font-size: 2em;
     color: #333;
     margin-bottom: 20px;
-    font-family: Soap, sans-serif;
 }
 
 button {
@@ -57,4 +55,14 @@ p {
 
 #followButton:hover {
     background-color: #e5533d; /* Slightly darker shade for hover */
+}
+
+/* Headline font */
+h1 {
+    font-family: "Cooper BT", sans-serif;
+}
+
+/* Body text font */
+body, #inspirationText, #activityIdea, button {
+    font-family: "ITC Franklin Gothic LT", sans-serif;
 }
