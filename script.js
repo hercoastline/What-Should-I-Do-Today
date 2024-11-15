@@ -3,7 +3,6 @@ const turkuActivities = [
     "Drink something warm in the forest",
     "Go to Ikea",
     "Bake gingerbread",
-    "Go for a walk around the city and watch the Churches",
     "Visit the Turku Cathedral",
     "Walk along the Aura River",
     "Visit the Turku Market Hall and try something new",
@@ -23,11 +22,11 @@ const archipelagoActivities = [
     "Visit Pargas and take a walk up to Hundbanan/Koirabaana",
     "Visit Art Bank in Pargas",
     "Drink hot chocolate at Vepo Laavu in Pargas",
-    "Go for a walk around Nagu harbor",
-    "Take a ferry to Seili Island and explore",
+    "Explore the old town in Naantali",
+    "Take a ferry to Seili Island",
     "Visit the Archipelago Centre Korpoström",
     "Have a cheese tasting at Jordkällaren in Pargas",
-    "Explore the old town in Naantali",
+    "Explore Nauvo Harbor",
     "Take a day trip to the Nauvo archipelago",
     "Have a picnic by the water in Parainen",
     "Visit a public sauna in the archipelago and take a dip",
@@ -37,13 +36,19 @@ const archipelagoActivities = [
 ];
 
 // Default activities and current edition
-let activities = turkuActivities;
-let currentEdition = "Turku";
+let activities = turkuActivities; // Default to Turku Edition
+const editionToggle = document.getElementById("editionToggle");
+const currentEditionLabel = document.getElementById("currentEdition");
 
-// Update activity list based on the selected edition
-function setEdition(edition) {
-    currentEdition = edition;
-    activities = edition === "Turku" ? turkuActivities : archipelagoActivities;
+// Update the activities based on toggle state
+function updateEdition() {
+    if (editionToggle.checked) {
+        activities = archipelagoActivities;
+        currentEditionLabel.textContent = "Archipelago Edition";
+    } else {
+        activities = turkuActivities;
+        currentEditionLabel.textContent = "Turku Edition";
+    }
     document.getElementById("activityIdea").textContent = ""; // Clear current activity
     document.getElementById("activityButton").textContent = "Tell me what to do";
 }
@@ -55,8 +60,7 @@ function displayNewIdea() {
     document.getElementById("activityButton").textContent = "Not today, give me another idea";
 }
 
-// Add event listeners for edition buttons
-document.getElementById("turkuButton").addEventListener("click", () => setEdition("Turku"));
-document.getElementById("archipelagoButton").addEventListener("click", () => setEdition("Archipelago"));
+// Add event listeners
+editionToggle.addEventListener("change", updateEdition);
 document.getElementById("activityButton").addEventListener("click", displayNewIdea);
 
