@@ -1,60 +1,54 @@
+/* General body styling */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Prevents content from overlapping */
+    justify-content: flex-start;
     margin: 0;
+    padding: 20px;
+    text-align: center;
     background-color: #f5f5f5;
-    text-align: center;
-    padding: 20px; /* Adds breathing space */
+    font-family: forma-djr-micro, sans-serif;
     max-width: 700px;
-    height: 100vh; /* Ensures full vertical space */
+    height: auto; /* Adjusts to fit content */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
 }
 
-/* Centers all text inside the body */
-h1, #inspirationText, #activityIdea, button {
-    text-align: center;
-    width: 100%; /* Ensures the text aligns within the full width of the container */
-    max-width: 1000px; /* Optionally, you can limit text width for better readability */
-}
-
-/* Ensure buttons are centered */
-button {
-    display: block;
-    margin: 10px auto; /* Adds spacing and centers the button */
-}
-}
-
-/* Ensure the h1 stays visible and styled */
+/* Headline styling */
 h1 {
     font-size: 3em;
     color: #ae401d;
     margin-bottom: 20px;
-    text-align: center;
-    font-family: soap, sans-serif; /* Maintain your custom font */
+    font-family: soap, sans-serif; /* Custom font */
 }
 
-
+/* General button styling */
 button {
+    display: block;
     padding: 10px 20px;
+    margin: 10px auto;
     font-size: 1.5em;
-    cursor: pointer;
-    border: none;
-    background-color: #bcbead;
+    font-family: forma-djr-micro, sans-serif; /* Matches body font */
     color: #fff;
+    background-color: #bcbead;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #9ca652;
 }
 
-p {
+/* Activity display styling */
+#activityIdea {
     font-size: 2em;
     color: #555;
     margin-top: 20px;
 }
 
+/* Footer text styling */
 #inspirationText {
     font-size: 1em;
     color: #666;
@@ -63,57 +57,29 @@ p {
     max-width: 80%;
 }
 
+/* Follow button */
 #followButton {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 1em;
-    cursor: pointer;
-    background-color: #ae401d; /* Feel free to change this color */
     color: #fff;
+    background-color: #ae401d; /* Custom color */
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #followButton:hover {
     background-color: #b48b75; /* Slightly darker shade for hover */
 }
 
-/* Headline font */
-h1 {
-    font-family: soap, sans-serif;
-}
-
-/* Body text font */
-body, #inspirationText, #activityIdea, button {
-    font-family: forma-djr-micro, sans-serif;
-}
-
-body {
-    max-width: 700px;
-    margin: 0 auto; /* Centers the content on larger screens */
-    padding: 0 20px; /* Adds a little padding on smaller screens */
-}
-
+/* Horizontal separator */
 hr {
     border: none; /* Removes default styling */
-    border-top: 1px solid #ccc; /* Creates a subtle line */
-    width: 80%; /* Adjusts the width of the line */
-    margin: 20px auto; /* Centers the line and adds space */
-}
-
-/* Toggle container */
-.toggle-container {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    align-items: center;
-    width: 500%; /* Increased width for more space */
-    height: 60px; /* Increased height for better text alignment */
-    background-color: #b6aa9b; /* Neutral background */
-    border-radius: 30px;
-    margin: 30px auto;
-    overflow: hidden;
-    cursor: pointer;
+    border-top: 1px solid #ccc; /* Subtle line */
+    width: 80%; /* Keeps it centered */
+    margin: 20px auto;
 }
 
 /* Toggle container */
@@ -123,12 +89,13 @@ hr {
     grid-template-columns: repeat(3, 1fr); /* Three equal sections */
     align-items: center;
     width: 100%;
-    max-width: 500px;
-    height: 50px;
+    max-width: 500px; /* Limits width */
+    height: 50px; /* Adjust height */
     background-color: #b6aa9b;
     border-radius: 30px;
     margin: 30px auto;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* Toggle slider */
@@ -136,39 +103,40 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
-    width: 33.33%; /* One-third of the container */
-    height: 100%;
+    width: 33.33%; /* Matches one-third of the container */
+    height: 100%; /* Matches container height */
     background-color: #bb9f7e;
     border-radius: 30px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth movement */
 }
 
 /* Toggle options */
 .toggle-option {
     text-align: center;
     font-size: 1em;
+    font-family: forma-djr-micro, sans-serif;
     color: #fff;
     line-height: 50px;
-    cursor: pointer; /* Makes options clickable */
+    cursor: pointer; /* Makes clickable */
 }
 
-/* Highlight the selected option */
 .toggle-option.selected {
-    font-weight: bold;
+    font-weight: bold; /* Highlights the selected option */
 }
 
+/* Photo gallery styling */
 #photoGallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-    gap: 15px; /* Space between the photos */
-    margin: 30px auto; /* Adds space above and centers the gallery */
-    max-width: 900px; /* Ensures the gallery doesn’t stretch too wide */
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 15px; /* Space between photos */
+    margin: 30px auto;
+    max-width: 900px; /* Ensures gallery width is limited */
 }
 
 #photoGallery img {
-    height: 200px; /* Ensures all images have the same height */
-    border-radius: 10px; /* Rounds the corners */
-    border: 2px solid #ae401d; /* Adds the specified border color */
-    object-fit: cover; /* Ensures images are cropped proportionally */
-    width: 100%; /* Ensures images fill their grid cell */
+    height: 200px; /* Keeps images uniform */
+    width: 100%; /* Fills grid space */
+    object-fit: cover; /* Crops proportionally */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #ae401d; /* Matches your chosen color */
 }
