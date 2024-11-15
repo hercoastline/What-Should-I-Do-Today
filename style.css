@@ -131,14 +131,13 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal sections */
     align-items: center;
-    width: 100%; /* Make it responsive */
-    max-width: 500px; /* Limit the width */
-    height: 50px; /* Adjust height for better text fit */
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
     background-color: #b6aa9b;
     border-radius: 30px;
     margin: 30px auto;
     overflow: hidden;
-    cursor: pointer;
 }
 
 /* Toggle slider */
@@ -147,7 +146,7 @@ hr {
     top: 0;
     left: 0;
     width: 33.33%; /* One-third of the container */
-    height: 100%; /* Matches the height of the container */
+    height: 100%;
     background-color: #bb9f7e;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -157,36 +156,14 @@ hr {
 .toggle-option {
     text-align: center;
     font-size: 1em;
-    z-index: 1;
     color: #fff;
-    line-height: 50px; /* Centers text vertically */
-    padding: 0 10px; /* Adds space for longer text */
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .toggle-container {
-        height: 60px; /* Increase height for readability on smaller screens */
-        max-width: 100%; /* Use full width */
-    }
-
-    .toggle-option {
-        font-size: 0.9em; /* Adjust font size for smaller screens */
-    }
-
-    #toggle-slider {
-        height: 60px; /* Match the container height */
-    }
+    line-height: 50px;
+    cursor: pointer; /* Makes options clickable */
 }
 
 /* Highlight the selected option */
 .toggle-option.selected {
-    color: #fff; /* Consistent text color */
-}
-
-/* Hover effect */
-.toggle-option:hover {
-    color: #fff; /* Text color on hover */
+    font-weight: bold;
 }
 
 #photoGallery {
