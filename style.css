@@ -157,3 +157,19 @@ hr {
     color: #fff; /* Darker text for selected option */
     font-weight: bold; /* Makes the selected option stand out */
 }
+
+#photoGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 15px; /* Space between the photos */
+    margin: 30px auto; /* Adds space above and centers the gallery */
+    max-width: 900px; /* Ensures the gallery doesn’t stretch too wide */
+}
+
+#photoGallery img {
+    height: 200px; /* Ensures all images have the same height */
+    border-radius: 10px; /* Rounds the corners */
+    border: 2px solid #ae401d; /* Adds the specified border color */
+    object-fit: cover; /* Ensures images are cropped proportionally */
+    width: 100%; /* Ensures images fill their grid cell */
+}
