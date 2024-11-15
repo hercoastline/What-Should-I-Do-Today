@@ -103,7 +103,7 @@ const archipelagoActivities = [
     "Take a walk around the Bläsnäs Beach area and enjoy the quiet shoreline.",
     "Watch the sunset at Mustfinn beach.”,
     "Find an unusual or quirky souvenir at a local Pargas shop.",
-    "Enjoy a coffee and watch the world go by from the windows of Café Axo.”,
+    "Enjoy a coffee and watch the world go by from the windows of Café Axo.”
 ];
 
 const homeActivities = [
@@ -147,8 +147,8 @@ const homeActivities = [
     "Make your own milkshake.",
     "Learn origami and make a collection of folded paper creations.",
     "Set up a mini home science experiment (like making slime).",
-    "Make your own marshmallows to add to hot chocolate."
-    "Plan your dream vacation and research all the fun things to do there.",
+    "Make your own marshmallows to add to hot chocolate.",
+    "Plan your dream vacation and research all the fun things to do there."
 ];
 
 // Default activities and slider position
