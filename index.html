@@ -9,18 +9,30 @@
 </head>
 <body>
     <h1>What should I do today?</h1>
+    
+    <!-- Toggle Switch for Editions -->
     <div id="editionSelector">
-        <button id="turkuButton">Turku Edition</button>
-        <button id="archipelagoButton">Archipelago Edition</button>
+        <label class="switch">
+            <input type="checkbox" id="editionToggle">
+            <span class="slider"></span>
+        </label>
+        <p id="currentEdition">Turku Edition</p>
     </div>
+
+    <!-- Activity Display -->
     <p id="activityIdea"></p>
     <button id="activityButton">Tell me what to do</button>
+
+    <!-- Separator -->
     <hr>
+
+    <!-- Footer Text and Follow Button -->
     <p id="inspirationText">
         This page was created to inspire people to put down their screens, enjoy the company of friends, and reconnect with themselves. 
         Created by <a href="https://instagram.com/hercoastline" target="_blank">HerCoastline</a> on Instagram. Make sure to follow for more inspiration!
     </p>
     <button id="followButton" onclick="window.open('https://instagram.com/hercoastline', '_blank')">Follow HerCoastline</button>
+    
     <script src="script.js"></script>
 </body>
 </html>
