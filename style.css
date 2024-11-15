@@ -2,11 +2,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start; /* Prevents content from overlapping */
+    height: auto; /* Adjusts to fit content */
     margin: 0;
     background-color: #f5f5f5;
     text-align: center;
+    padding: 20px; /* Adds breathing space */
 
     body {
     display: flex;
@@ -33,12 +34,15 @@ button {
 }
 }
 
+/* Ensure the h1 stays visible and styled */
 h1 {
     font-size: 3em;
     color: #ae401d;
     margin-bottom: 20px;
     text-align: center;
+    font-family: soap, sans-serif; /* Maintain your custom font */
 }
+
 
 button {
     padding: 10px 20px;
