@@ -114,7 +114,7 @@ hr {
     align-items: center;
     width: 300px;
     height: 40px;
-    background-color: #b7d1c5;
+    background-color: #b6aa9b;
     border-radius: 20px;
     margin: 20px auto;
     overflow: hidden;
@@ -128,8 +128,8 @@ hr {
     left: 0;
     width: 50%;
     height: 100%;
-    background-color: #80c2a2; /* Highlighted color */
-    border-radius: 20px;
+    background-color: #bb9f7e; /* Highlighted color */
+    border-radius: 30px;
     transition: all 0.3s ease;
 }
 
@@ -139,7 +139,7 @@ hr {
     text-align: center;
     font-size: 1em;
     z-index: 1; /* Ensures text appears on top of the slider */
-    color: #b7d1c5;
+    color: #fff;
     line-height: 40px;
 }
 
