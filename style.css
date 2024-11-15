@@ -114,11 +114,11 @@ hr {
 .toggle-container {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for the options */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     align-items: center;
-    width: 400px; /* Increased width for more space */
-    height: 50px; /* Increased height for better text visibility */
-    background-color: #b6aa9b; /* Neutral background for toggle */
+    width: 500px; /* Increased width for more space */
+    height: 60px; /* Increased height for better text alignment */
+    background-color: #b6aa9b; /* Neutral background */
     border-radius: 30px;
     margin: 30px auto;
     overflow: hidden;
@@ -131,32 +131,32 @@ hr {
     top: 0;
     left: 0;
     width: 33.33%; /* One-third of the container width */
-    height: 100%; /* Matches the height of the container */
-    background-color: #bb9f7e; /* Highlighted color for the slider */
+    height: 100%; /* Matches the container height */
+    background-color: #bb9f7e; /* Highlighted color */
     border-radius: 30px;
-    transition: all 0.3s ease; /* Smooth animation for slider movement */
+    transition: all 0.3s ease; /* Smooth animation */
 }
 
 /* Toggle options */
 .toggle-option {
     text-align: center;
-    font-size: 1.2em; /* Slightly larger font for better readability */
-    z-index: 1; /* Ensures text appears on top of the slider */
+    font-size: 1.1em; /* Slightly smaller font size */
+    z-index: 1; /* Ensures text appears above the slider */
     color: #fff; /* Default text color */
-    line-height: 50px; /* Vertically centers the text inside the toggle */
-    font-weight: bold; /* Makes text stand out */
-    padding: 0 5px; /* Adds padding for longer text */
+    line-height: 60px; /* Centers text vertically */
+    font-weight: bold;
+    padding: 0 10px; /* Adds more space for longer text */
+    word-wrap: break-word; /* Breaks long words if needed */
 }
 
 /* Highlight the selected option */
 .toggle-option.selected {
-    color: #fff; /* Keeps text color consistent for the selected option */
-    font-weight: bold;
+    color: #fff; /* Consistent text color */
 }
 
 /* Hover effect */
 .toggle-option:hover {
-    color: #fff; /* Ensures hover matches overall color scheme */
+    color: #fff; /* Text color on hover */
 }
 
 #photoGallery {
