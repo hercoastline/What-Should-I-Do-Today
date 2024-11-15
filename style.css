@@ -114,10 +114,10 @@ hr {
 .toggle-container {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for the options */
     align-items: center;
-    width: 350px; /* Adjusted width for three options */
-    height: 40px;
+    width: 400px; /* Increased width for more space */
+    height: 50px; /* Increased height for better text visibility */
     background-color: #b6aa9b; /* Neutral background for toggle */
     border-radius: 30px;
     margin: 30px auto;
@@ -131,7 +131,7 @@ hr {
     top: 0;
     left: 0;
     width: 33.33%; /* One-third of the container width */
-    height: 100%;
+    height: 100%; /* Matches the height of the container */
     background-color: #bb9f7e; /* Highlighted color for the slider */
     border-radius: 30px;
     transition: all 0.3s ease; /* Smooth animation for slider movement */
@@ -140,16 +140,17 @@ hr {
 /* Toggle options */
 .toggle-option {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em; /* Slightly larger font for better readability */
     z-index: 1; /* Ensures text appears on top of the slider */
     color: #fff; /* Default text color */
-    line-height: 40px; /* Centers text vertically */
+    line-height: 50px; /* Vertically centers the text inside the toggle */
     font-weight: bold; /* Makes text stand out */
+    padding: 0 5px; /* Adds padding for longer text */
 }
 
 /* Highlight the selected option */
 .toggle-option.selected {
-    color: #fff; /* Keeps text color consistent for selected option */
+    color: #fff; /* Keeps text color consistent for the selected option */
     font-weight: bold;
 }
 
