@@ -132,6 +132,11 @@ hr {
     font-weight: bold; /* Highlights the selected option */
 }
 
+/* Hover effect */
+.toggle-option:hover {
+    color: #fff; /* Keeps hover consistent */
+}
+
 /* Photo gallery styling */
 #photoGallery {
     display: grid;
