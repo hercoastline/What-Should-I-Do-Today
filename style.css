@@ -112,11 +112,11 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    width: 350px;
     height: 40px;
     background-color: #b6aa9b;
-    border-radius: 20px;
-    margin: 20px auto;
+    border-radius: 30px;
+    margin: 30px auto;
     overflow: hidden;
     cursor: pointer;
 }
