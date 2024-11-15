@@ -123,10 +123,12 @@ hr {
     font-family: forma-djr-micro, sans-serif;
     color: #fff;
     line-height: 50px;
+     z-index: 2; /* Ensures text is above the slider */
     cursor: pointer; /* Makes clickable */
 }
 
 .toggle-option.selected {
+    color: #fff;
     font-weight: bold; /* Highlights the selected option */
 }
 
