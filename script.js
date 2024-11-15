@@ -152,38 +152,43 @@ const homeActivities = [
 
 // Default activities and slider position
 let activities = turkuActivities;
-const toggleSlider = document.getElementById("toggle-slider");
-const turkuOption = document.getElementById("turkuOption");
-const archipelagoOption = document.getElementById("archipelagoOption");
-const homeOption = document.getElementById("homeOption");
 
-// Function to switch editions
-function switchEdition(edition) {
-    if (edition === "Turku") {
-        toggleSlider.style.left = "0"; // Move slider to Turku
-        activities = turkuActivities;
-    } else if (edition === "Archipelago") {
-        toggleSlider.style.left = "33.33%"; // Move slider to Archipelago
-        activities = archipelagoActivities;
-    } else if (edition === "Home") {
-        toggleSlider.style.left = "66.66%"; // Move slider to Home
-        activities = homeActivities;
+// Ensure DOM is loaded before adding event listeners
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleSlider = document.getElementById("toggle-slider");
+    const turkuOption = document.getElementById("turkuOption");
+    const archipelagoOption = document.getElementById("archipelagoOption");
+    const homeOption = document.getElementById("homeOption");
+    const activityIdea = document.getElementById("activityIdea");
+    const activityButton = document.getElementById("activityButton");
+
+    // Function to switch editions
+    function switchEdition(edition) {
+        if (edition === "Turku") {
+            toggleSlider.style.left = "0"; // Move slider to Turku
+            activities = turkuActivities;
+        } else if (edition === "Archipelago") {
+            toggleSlider.style.left = "33.33%"; // Move slider to Archipelago
+            activities = archipelagoActivities;
+        } else if (edition === "Home") {
+            toggleSlider.style.left = "66.66%"; // Move slider to Home
+            activities = homeActivities;
+        }
+        // Clear the displayed activity
+        activityIdea.textContent = "";
+        activityButton.textContent = "Tell me what to do";
     }
-    // Clear the displayed activity
-    document.getElementById("activityIdea").textContent = "";
-    document.getElementById("activityButton").textContent = "Tell me what to do";
-}
 
-// Show a random activity
-function displayNewIdea() {
-    const randomIdea = activities[Math.floor(Math.random() * activities.length)];
-    document.getElementById("activityIdea").textContent = randomIdea;
-    document.getElementById("activityButton").textContent = "Give me another idea :)";
-}
+    // Show a random activity
+    function displayNewIdea() {
+        const randomIdea = activities[Math.floor(Math.random() * activities.length)];
+        activityIdea.textContent = randomIdea;
+        activityButton.textContent = "Give me another idea :)";
+    }
 
-// Add event listeners for edition switches
-turkuOption.addEventListener("click", () => switchEdition("Turku"));
-archipelagoOption.addEventListener("click", () => switchEdition("Archipelago"));
-homeOption.addEventListener("click", () => switchEdition("Home"));
-document.getElementById("activityButton").addEventListener("click", displayNewIdea);
-
+    // Add event listeners for edition switches
+    turkuOption.addEventListener("click", () => switchEdition("Turku"));
+    archipelagoOption.addEventListener("click", () => switchEdition("Archipelago"));
+    homeOption.addEventListener("click", () => switchEdition("Home"));
+    activityButton.addEventListener("click", displayNewIdea);
+});
