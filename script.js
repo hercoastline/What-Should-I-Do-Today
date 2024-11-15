@@ -64,7 +64,7 @@ const turkuActivities = [
     "Go for a beer at Cosmic Comic Café.",
     "Have a movie night at home with snacks from Turku’s gourmet shops.",
     "Enjoy a drink at Restaurant Nerå.",
-    "Go out to eat dessert, and dessert only."
+    "Go out to eat dessert, and dessert only.",
     "Try out Hohto Mini-Golf for a glow-in-the-dark putting adventure."
 ];
 
@@ -72,7 +72,7 @@ const archipelagoActivities = [
     "Take a walk up Hundbanan/Koirabaana and enjoy the views.",
     "Explore the surreal world of Salvador Dalí at Art Bank.",
     "Warm up with a hot chocolate at Vepo Laavu.",
-    "Bring a thermos and drink something warm the forest.",
+    "Bring a thermos and drink something warm in the forest.",
     "Go for a walk to Munkviken Nature Path",
     "Eat cake at café Hallonblad",
     "Try a delicious pie at Café Nathalie.",
@@ -99,15 +99,14 @@ const archipelagoActivities = [
     "Take a quiet walk along Sundet.",
     "Bring a thermos of hot chocolate to Hundbanan and enjoy it while watching the quarry from above.",
     "Walk through the town center and enjoy the seasonal decorations or lights.",
-    "Walk to the top of the Pargas Water Tower.”,
+    "Walk to the top of the Pargas Water Tower.",
     "Take a walk around the Bläsnäs Beach area and enjoy the quiet shoreline.",
-    "Watch the sunset at Mustfinn beach.”,
+    "Watch the sunset at Mustfinn beach.",
     "Find an unusual or quirky souvenir at a local Pargas shop.",
-    "Enjoy a coffee and watch the world go by from the windows of Café Axo.”
+    "Enjoy a coffee and watch the world go by from the windows of Café Axo."
 ];
 
 const homeActivities = [
-    "Bake cookies",
     "Host a mini cook-off with friends",
     "Do a puzzle",
     "Paint candles",
