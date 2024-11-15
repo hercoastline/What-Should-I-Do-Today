@@ -99,7 +99,7 @@ const archipelagoActivities = [
     "Take a quiet walk along Sundet.",
     "Bring a thermos of hot chocolate to Hundbanan and enjoy it while watching the quarry from above.",
     "Walk through the town center and enjoy the seasonal decorations or lights.",
-    "Walk to the top of the Pargas Water Tower.",
+    "Walk around Pargas Water Tower.",
     "Take a walk around the Bläsnäs Beach area and enjoy the quiet shoreline.",
     "Watch the sunset at Mustfinn beach.",
     "Find an unusual or quirky souvenir at a local Pargas shop.",
