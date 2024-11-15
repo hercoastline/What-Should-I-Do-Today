@@ -106,23 +106,58 @@ hr {
     margin: 20px auto; /* Centers the line and adds space */
 }
 
-#editionSelector {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+/* Style for the toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 15px;
 }
 
-#editionSelector button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 1em;
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
     cursor: pointer;
-    border: none;
-    background-color: #bcbead;
-    color: #fff;
-    border-radius: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
 }
 
-#editionSelector button:hover {
-    background-color: #9ca652;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Edition label */
+#currentEdition {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
 }
