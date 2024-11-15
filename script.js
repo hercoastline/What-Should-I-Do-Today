@@ -1,55 +1,37 @@
-// Turku Edition activities
+// Get references to toggle elements
+const toggleSlider = document.getElementById("toggle-slider");
+const turkuOption = document.getElementById("turkuOption");
+const archipelagoOption = document.getElementById("archipelagoOption");
+
+// Activities for Turku and Archipelago
 const turkuActivities = [
     "Drink something warm in the forest",
     "Go to Ikea",
-    "Bake gingerbread",
     "Visit the Turku Cathedral",
     "Walk along the Aura River",
-    "Visit the Turku Market Hall and try something new",
-    "Play Shuffleboard at Galaxie Center",
-    "Have a drink at Bar Rica",
-    "Try a new beer at 5piste5",
-    "Go for a beer and play boardgames at Hugo",
-    "Go thrift shopping to SPR-kontti",
-    "Visit Aboa Vetus & Ars Nova",
-    "Check out today's events and attend something random",
-    "Go for a walk to Virnamäenpuisto",
-    "Visit a café and try something you've never ordered before"
+    "Play Shuffleboard at Galaxie Center"
 ];
 
-// Archipelago Edition activities
 const archipelagoActivities = [
     "Visit Pargas and take a walk up to Hundbanan/Koirabaana",
     "Visit Art Bank in Pargas",
     "Drink hot chocolate at Vepo Laavu in Pargas",
-    "Explore the old town in Naantali",
-    "Take a ferry to Seili Island",
-    "Visit the Archipelago Centre Korpoström",
-    "Have a cheese tasting at Jordkällaren in Pargas",
-    "Explore Nauvo Harbor",
-    "Take a day trip to the Nauvo archipelago",
-    "Have a picnic by the water in Parainen",
-    "Visit a public sauna in the archipelago and take a dip",
-    "Go hiking on a nature trail in Nauvo",
-    "Visit a local craft store in the archipelago",
-    "Take a spontaneous ferry ride and explore a new island"
+    "Take a ferry to Seili Island"
 ];
 
-// Default activities and current edition
-let activities = turkuActivities; // Default to Turku Edition
-const editionToggle = document.getElementById("editionToggle");
-const currentEditionLabel = document.getElementById("currentEdition");
+// Default to Turku Edition
+let activities = turkuActivities;
 
-// Update the activities based on toggle state
-function updateEdition() {
-    if (editionToggle.checked) {
-        activities = archipelagoActivities;
-        currentEditionLabel.textContent = "Archipelago Edition";
+// Function to switch editions
+function switchEdition(edition) {
+    if (edition === "Turku") {
+        toggleSlider.style.left = "0"; // Move slider to the left
+        activities = turkuActivities; // Update activities
     } else {
-        activities = turkuActivities;
-        currentEditionLabel.textContent = "Turku Edition";
+        toggleSlider.style.left = "50%"; // Move slider to the right
+        activities = archipelagoActivities; // Update activities
     }
-    document.getElementById("activityIdea").textContent = ""; // Clear current activity
+    document.getElementById("activityIdea").textContent = ""; // Clear activity
     document.getElementById("activityButton").textContent = "Tell me what to do";
 }
 
@@ -59,6 +41,11 @@ function displayNewIdea() {
     document.getElementById("activityIdea").textContent = randomIdea;
     document.getElementById("activityButton").textContent = "Not today, give me another idea";
 }
+
+// Add event listeners for edition switch
+turkuOption.addEventListener("click", () => switchEdition("Turku"));
+archipelagoOption.addEventListener("click", () => switchEdition("Archipelago"));
+document.getElementById("activityButton").addEventListener("click", displayNewIdea);
 
 // Add event listeners
 editionToggle.addEventListener("change", updateEdition);
