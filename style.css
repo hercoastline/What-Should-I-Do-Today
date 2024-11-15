@@ -113,12 +113,12 @@ hr {
 /* Toggle container */
 .toggle-container {
     position: relative;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     align-items: center;
-    width: 350px;
+    width: 350px; /* Adjusted width for three options */
     height: 40px;
-    background-color: #b6aa9b;
+    background-color: #b6aa9b; /* Neutral background for toggle */
     border-radius: 30px;
     margin: 30px auto;
     overflow: hidden;
@@ -130,36 +130,32 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 33.33%; /* One-third of the container width */
     height: 100%;
-    background-color: #bb9f7e; /* Highlighted color */
+    background-color: #bb9f7e; /* Highlighted color for the slider */
     border-radius: 30px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth animation for slider movement */
 }
 
 /* Toggle options */
 .toggle-option {
-    flex: 1;
     text-align: center;
     font-size: 1em;
     z-index: 1; /* Ensures text appears on top of the slider */
-    color: #fff;
-    line-height: 40px;
-}
-
-.toggle-option:hover {
-    color: #fff;
-}
-
-/* Default option styles */
-.toggle-option {
     color: #fff; /* Default text color */
+    line-height: 40px; /* Centers text vertically */
+    font-weight: bold; /* Makes text stand out */
 }
 
 /* Highlight the selected option */
 .toggle-option.selected {
-    color: #fff; /* Darker text for selected option */
-    font-weight: bold; /* Makes the selected option stand out */
+    color: #fff; /* Keeps text color consistent for selected option */
+    font-weight: bold;
+}
+
+/* Hover effect */
+.toggle-option:hover {
+    color: #fff; /* Ensures hover matches overall color scheme */
 }
 
 #photoGallery {
