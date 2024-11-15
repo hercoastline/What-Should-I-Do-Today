@@ -105,3 +105,24 @@ hr {
     width: 80%; /* Adjusts the width of the line */
     margin: 20px auto; /* Centers the line and adds space */
 }
+
+#editionSelector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#editionSelector button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #bcbead;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#editionSelector button:hover {
+    background-color: #9ca652;
+}
