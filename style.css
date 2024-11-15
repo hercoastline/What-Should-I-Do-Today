@@ -125,36 +125,54 @@ hr {
     cursor: pointer;
 }
 
-/* Edition Selector */
-#editionSelector {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Space between buttons */
+/* Toggle container */
+.toggle-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    align-items: center;
+    width: 500px; /* Increased width for more space */
+    height: 60px; /* Increased height for better text alignment */
+    background-color: #b6aa9b; /* Neutral background */
+    border-radius: 30px;
     margin: 30px auto;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-/* Buttons */
-.edition-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    font-weight: bold;
-    border: none;
+/* Toggle slider */
+#toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%; /* One-third of the container width */
+    height: 100%; /* Matches the container height */
+    background-color: #bb9f7e; /* Highlighted color */
     border-radius: 30px;
-    background-color: #b6aa9b; /* Neutral background for buttons */
-    color: #fff; /* Text color */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+/* Toggle options */
+.toggle-option {
+    text-align: center;
+    font-size: 1.1em; /* Slightly smaller font size */
+    z-index: 1; /* Ensures text appears above the slider */
+    color: #fff; /* Default text color */
+    line-height: 60px; /* Centers text vertically */
+    font-weight: bold;
+    padding: 0 10px; /* Adds more space for longer text */
+    word-wrap: break-word; /* Breaks long words if needed */
+}
+
+/* Highlight the selected option */
+.toggle-option.selected {
+    color: #fff; /* Consistent text color */
+    font-weight: bold;
 }
 
 /* Hover effect */
-.edition-button:hover {
-    background-color: #bb9f7e; /* Highlighted hover color */
-    transform: scale(1.05); /* Slight enlargement on hover */
-}
-
-/* Selected button */
-.edition-button.selected {
-    background-color: #bb9f7e; /* Highlighted color for the selected edition */
+.toggle-option:hover {
+    color: #fff; /* Text color on hover */
 }
 
 #photoGallery {
