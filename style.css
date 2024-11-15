@@ -116,7 +116,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     align-items: center;
-    width: 700%; /* Increased width for more space */
+    width: 500%; /* Increased width for more space */
     height: 60px; /* Increased height for better text alignment */
     background-color: #b6aa9b; /* Neutral background */
     border-radius: 30px;
@@ -131,7 +131,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     align-items: center;
-    width: 700px; /* Increased width for more space */
+    width: 500px; /* Increased width for more space */
     height: 60px; /* Increased height for better text alignment */
     background-color: #b6aa9b; /* Neutral background */
     border-radius: 30px;
