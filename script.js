@@ -138,7 +138,7 @@ function switchEdition(edition) {
 function displayNewIdea() {
     const randomIdea = activities[Math.floor(Math.random() * activities.length)];
     document.getElementById("activityIdea").textContent = randomIdea;
-    document.getElementById("activityButton").textContent = "Not today, give me another idea";
+    document.getElementById("activityButton").textContent = "Give me another idea :)";
 }
 
 // Add event listeners for edition switches
