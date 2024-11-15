@@ -10,11 +10,12 @@ body {
     background-color: #f5f5f5;
     font-family: forma-djr-micro, sans-serif;
     box-sizing: border-box; /* Ensures padding doesn't break layout */
+    max-width: 500px;
 }
 
 /* Wrapper for content to maintain consistent centering */
 .wrapper {
-    max-width: 600px; /* Constrains content width */
+    max-width: 500px; /* Constrains content width */
     width: 100%; /* Allows responsiveness */
     text-align: center; /* Ensures all text is centered */
 }
@@ -99,7 +100,7 @@ hr {
     grid-template-columns: repeat(3, 1fr); /* Three equal sections */
     align-items: center;
     width: 100%;
-    max-width: 550px; /* Limits width */
+    max-width: 600px; /* Limits width */
     height: 50px; /* Adjust height */
     background-color: #b6aa9b;
     border-radius: 30px;
@@ -140,6 +141,20 @@ hr {
 .toggle-option:hover {
     color: #fff; /* Keeps hover consistent */
 }
+
+@media (max-width: 400px) {
+    .toggle-container {
+        max-width: 90%; /* Reduce width for smaller screens */
+    }
+
+    #toggle-slider {
+        width: 35%; /* Slightly larger slider for readability */
+    }
+
+    .toggle-option {
+        font-size: 0.9em; /* Slightly smaller font for small screens */
+        padding: 0 5px; /* Reduce padding */
+    }
 
 /* Photo gallery styling */
 #photoGallery {
