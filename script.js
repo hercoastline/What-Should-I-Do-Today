@@ -161,16 +161,17 @@ const homeOption = document.getElementById("homeOption");
 // Function to switch editions
 function switchEdition(edition) {
     if (edition === "Turku") {
-        toggleSlider.style.left = "0"; // Slider to the first position
+        toggleSlider.style.left = "0"; // Move slider to Turku
         activities = turkuActivities;
     } else if (edition === "Archipelago") {
-        toggleSlider.style.left = "33.33%"; // Slider to the middle position
+        toggleSlider.style.left = "33.33%"; // Move slider to Archipelago
         activities = archipelagoActivities;
     } else if (edition === "Home") {
-        toggleSlider.style.left = "66.66%"; // Slider to the third position
+        toggleSlider.style.left = "66.66%"; // Move slider to Home
         activities = homeActivities;
     }
-    document.getElementById("activityIdea").textContent = ""; // Clear activity
+    // Clear the displayed activity
+    document.getElementById("activityIdea").textContent = "";
     document.getElementById("activityButton").textContent = "Tell me what to do";
 }
 
