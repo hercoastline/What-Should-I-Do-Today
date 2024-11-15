@@ -14,7 +14,7 @@ body {
 
 /* Wrapper for content to maintain consistent centering */
 .wrapper {
-    max-width: 700px; /* Constrains content width */
+    max-width: 600px; /* Constrains content width */
     width: 100%; /* Allows responsiveness */
     text-align: center; /* Ensures all text is centered */
 }
