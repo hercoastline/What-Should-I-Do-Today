@@ -2,16 +2,21 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start; /* Ensures content starts from the top */
     margin: 0;
     padding: 20px;
     text-align: center;
     background-color: #f5f5f5;
     font-family: forma-djr-micro, sans-serif;
-    max-width: 700px;
-    height: auto; /* Adjusts to fit content */
-    box-sizing: border-box; /* Includes padding in width/height calculations */
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+/* Wrapper for content to maintain consistent centering */
+.wrapper {
+    max-width: 700px; /* Constrains content width */
+    width: 100%; /* Allows responsiveness */
+    text-align: center; /* Ensures all text is centered */
 }
 
 /* Headline styling */
@@ -54,7 +59,8 @@ button:hover {
     color: #666;
     text-align: center;
     margin-top: 20px;
-    max-width: 80%;
+    max-width: 80%; /* Keeps text constrained for readability */
+    margin: 0 auto; /* Centers the text block */
 }
 
 /* Follow button */
