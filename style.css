@@ -143,20 +143,6 @@ hr {
     color: #fff; /* Keeps hover consistent */
 }
 
-@media (max-width: 500px) {
-    .toggle-container {
-        max-width: 90%; /* Reduce width for smaller screens */
-    }
-
-    #toggle-slider {
-        width: 35%; /* Slightly larger slider for readability */
-    }
-
-    .toggle-option {
-        font-size: 0.9em; /* Slightly smaller font for small screens */
-        padding: 0 5px; /* Reduce padding */
-    }
-
 /* Photo gallery styling */
 #photoGallery {
     display: grid;
