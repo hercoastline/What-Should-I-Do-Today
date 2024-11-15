@@ -53,7 +53,6 @@ const turkuActivities = [
     "Visit a flower shop and pick a plant to take home",
     "Find an ice cream place and try a new flavor combination",
     "Visit an antique shop and explore unique items",
-    "Visit Pargas and drink hot chocolate at Vepo Laavu",
     "Take a drive without a destination and see where you end up",
     "Go for a walk around Portsa, stop at Kaos Thrift and ARVO",
     "Go for a walk to the Turku Cemetery",
