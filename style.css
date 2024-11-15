@@ -125,38 +125,36 @@ hr {
     cursor: pointer;
 }
 
-/* Toggle slider */
-#toggle-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 33.33%; /* One-third of the container width */
-    height: 100%; /* Matches the container height */
-    background-color: #bb9f7e; /* Highlighted color */
-    border-radius: 30px;
-    transition: all 0.3s ease; /* Smooth animation */
+/* Edition Selector */
+#editionSelector {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin: 30px auto;
 }
 
-/* Toggle options */
-.toggle-option {
-    text-align: center;
-    font-size: 1em; /* Slightly smaller font size */
-    z-index: 1; /* Ensures text appears above the slider */
-    color: #fff; /* Default text color */
-    line-height: 60px; /* Centers text vertically */
-    padding: 0 10px; /* Adds more space for longer text */
-    word-wrap: break-word; /* Breaks long words if needed */
-}
-
-/* Highlight the selected option */
-.toggle-option.selected {
-    color: #fff; /* Consistent text color */
+/* Buttons */
+.edition-button {
+    padding: 10px 20px;
+    font-size: 1em;
     font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background-color: #b6aa9b; /* Neutral background for buttons */
+    color: #fff; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover effect */
-.toggle-option:hover {
-    color: #fff; /* Text color on hover */
+.edition-button:hover {
+    background-color: #bb9f7e; /* Highlighted hover color */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Selected button */
+.edition-button.selected {
+    background-color: #bb9f7e; /* Highlighted color for the selected edition */
 }
 
 #photoGallery {
