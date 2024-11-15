@@ -4,13 +4,14 @@ body {
     flex-direction: column;
     align-items: center; /* Centers content horizontally */
     justify-content: flex-start; /* Ensures content starts from the top */
-    margin: 0;
+    margin: 0 auto; /* Centers the body horizontally */
     padding: 20px;
     text-align: center;
     background-color: #f5f5f5;
     font-family: forma-djr-micro, sans-serif;
-    box-sizing: border-box; /* Ensures padding doesn't break layout */
-    max-width: 500px;
+    box-sizing: border-box; /* Includes padding in width/height calculations */
+    max-width: 500px; /* Keeps the body narrow */
+    height: auto; /* Adjusts to fit content */
 }
 
 /* Wrapper for content to maintain consistent centering */
