@@ -131,7 +131,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     align-items: center;
-    width: 500px; /* Increased width for more space */
+    width: 700px; /* Increased width for more space */
     height: 60px; /* Increased height for better text alignment */
     background-color: #b6aa9b; /* Neutral background */
     border-radius: 30px;
@@ -155,11 +155,10 @@ hr {
 /* Toggle options */
 .toggle-option {
     text-align: center;
-    font-size: 1.1em; /* Slightly smaller font size */
+    font-size: 0.9em; /* Slightly smaller font size */
     z-index: 1; /* Ensures text appears above the slider */
     color: #fff; /* Default text color */
     line-height: 60px; /* Centers text vertically */
-    font-weight: bold;
     padding: 0 10px; /* Adds more space for longer text */
     word-wrap: break-word; /* Breaks long words if needed */
 }
@@ -167,7 +166,6 @@ hr {
 /* Highlight the selected option */
 .toggle-option.selected {
     color: #fff; /* Consistent text color */
-    font-weight: bold;
 }
 
 /* Hover effect */
