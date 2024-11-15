@@ -1,109 +1,62 @@
-// List of activity ideas
-const activities = [
+// Turku Edition activities
+const turkuActivities = [
     "Drink something warm in the forest",
     "Go to Ikea",
-    "Go to Pargas and visit Art Bank",
     "Bake gingerbread",
     "Go for a walk around the city and watch the Churches",
-    "Write a thank-you letter to someone you appreciate",
-    "Go for a walk in nature",
-    "Bake something new",
-    "Cook dinner using seasonal ingredients",
-    "Make a travel list and research each place",
-    "Visit a public sauna, like Järvelän Avanto, and have a dip in the sea",
-    "Go bowling",
-    "Go play billiard",
+    "Visit the Turku Cathedral",
+    "Walk along the Aura River",
+    "Visit the Turku Market Hall and try something new",
     "Play Shuffleboard at Galaxie Center",
-    "Hike up to the top of Hirvensalo",
-    "Visit a café and try something you've never ordered before",
-    "Take a day trip to Naantali and visit the old town",
-    "Take a day trip to Naantali and walk the Path of Love",
-    "Walk around Moomin World",
-    "Visit the a museum",
-    "Try making your own glögi (mulled wine)",
-    "Go thrift shopping to SPR-kontti",
-    "Have a spa day at home – facemasks, candles, and relaxing music",
-    "Visit Ruissalo and enjoy the trails or botanical garden",
-    "Go to Happy Badger and play a new boardgame",
-    "Visit Ruissalo and enjoy the trails or botanical garden",
-    "Eat outdoors - pack something warm and head to nature",
-    "Go bouldering",
-    "Play padel",
-    "Play badminton",
-    "Play squash",
-    "Go to the trampoline park",
     "Have a drink at Bar Rica",
-    "Have a drink at Arvo",
     "Try a new beer at 5piste5",
     "Go for a beer and play boardgames at Hugo",
-    "Walk around the city and go for a beer at a random pub",
-    "Go for a walk around Katariinanlaakso",
-    "Go for a drive and listen to a podcast",
-    "Go for a drive and get a milkshake from Burger King",
-    "Go for a walk around Luolavuori",
-    "Visit Piispanlinnan rauniot",
-    "Enjoy the day/evening at Kakola Spa",
-    "Eat dinner at a new restaurant",
-    "Go for a walk around Littoistenjärvi",
-    "Play boardgames at home",
-    "Make something out of clay",
-    "Paint candles",
-    "Make your own sushi",
-    "Make pizza from scratch",
-    "Eat pancakes, preferably outdoors",
-    "Throw a mexican evening, tortillas from scratch and mexican beer for everyone!",
-    "Make pasta from scratch",
-    "Make cupcakes",
-    "Bake cinnamonbuns",
-    "Play UNO",
-    "Visit the Turku Market Hall and try something new",
-    "Host a mini cook-off with friends – each person brings a homemade dish",
-    "Build a puzzle together",
-    "Visit the Turku Cathedral",
-    "Bake something with seasonal berries or fruit",
-    "Walk along the Aura River",
-    "Walk along Nummenranta and Koroistenniemi",
-    "Go for a walk to Virnamäenpuisto",
+    "Go thrift shopping to SPR-kontti",
     "Visit Aboa Vetus & Ars Nova",
-    "Bake cookies at home",
-    "Take a spontaneous trip to a nearby town",
-    "Take a spontaneous trip to Helsinki",
-    "Take a nature walk and collect leaves or stones for crafting",
-    "Go ice skating if there's an available rink",
-    "Try a new tea blend at home",
-    "Have a beer tasting at home",
-    "Make homemade hot chocolate with unique flavors",
-    "Make your own hot sauce or jam",
-    "Listen to a podcast while going for a walk",
-    "Write and send postcards to friends or family",
-    "Research local history and find historic sites to visit",
-    "Visit a nearby town for lunch or dinner",
-    "Bake bread",
-    "Go geocaching around the city",
-    "Check out todays events and attend something random",
-    "Have a cheese tasting night with different types of cheese",
-    "Go to Pargas and visit Jordkällaren to buy extremely good cheese",
-    "Visit a flower shop and pick a plant to take home",
-    "Find an ice cream place and try a new flavor combination",
-    "Visit an antique shop and explore unique items",
-    "Do an evening walk in a forest with a flashlight",
-    "Visit Pargas and take a walk up to Hundbanan/Koirabaana",
-    "Visit Pargas and drink hot chocolate at Vepo Laavu",
-    "Take a drive without a destination and see where you end up",
-    "Go for a walk around Portsa, stop at Kaos Thrift and ARVO",
-    "Go for a walk to the Turku Cemetery",
+    "Check out today's events and attend something random",
+    "Go for a walk to Virnamäenpuisto",
+    "Visit a café and try something you've never ordered before"
 ];
 
-// Find the button and the text area
-const button = document.getElementById("activityButton");
-const activityIdea = document.getElementById("activityIdea");
+// Archipelago Edition activities
+const archipelagoActivities = [
+    "Visit Pargas and take a walk up to Hundbanan/Koirabaana",
+    "Visit Art Bank in Pargas",
+    "Drink hot chocolate at Vepo Laavu in Pargas",
+    "Go for a walk around Nagu harbor",
+    "Take a ferry to Seili Island and explore",
+    "Visit the Archipelago Centre Korpoström",
+    "Have a cheese tasting at Jordkällaren in Pargas",
+    "Explore the old town in Naantali",
+    "Take a day trip to the Nauvo archipelago",
+    "Have a picnic by the water in Parainen",
+    "Visit a public sauna in the archipelago and take a dip",
+    "Go hiking on a nature trail in Nauvo",
+    "Visit a local craft store in the archipelago",
+    "Take a spontaneous ferry ride and explore a new island"
+];
 
-// Function to show a random idea
-function displayNewIdea() {
-    const randomIdea = activities[Math.floor(Math.random() * activities.length)];
-    activityIdea.textContent = randomIdea;
-    button.textContent = "Not today, give me another idea";
+// Default activities and current edition
+let activities = turkuActivities;
+let currentEdition = "Turku";
+
+// Update activity list based on the selected edition
+function setEdition(edition) {
+    currentEdition = edition;
+    activities = edition === "Turku" ? turkuActivities : archipelagoActivities;
+    document.getElementById("activityIdea").textContent = ""; // Clear current activity
+    document.getElementById("activityButton").textContent = "Tell me what to do";
 }
 
-// Add a click event to the button
-button.addEventListener("click", displayNewIdea);
+// Show a random activity
+function displayNewIdea() {
+    const randomIdea = activities[Math.floor(Math.random() * activities.length)];
+    document.getElementById("activityIdea").textContent = randomIdea;
+    document.getElementById("activityButton").textContent = "Not today, give me another idea";
+}
+
+// Add event listeners for edition buttons
+document.getElementById("turkuButton").addEventListener("click", () => setEdition("Turku"));
+document.getElementById("archipelagoButton").addEventListener("click", () => setEdition("Archipelago"));
+document.getElementById("activityButton").addEventListener("click", displayNewIdea);
+
