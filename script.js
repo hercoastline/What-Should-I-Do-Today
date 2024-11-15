@@ -131,7 +131,6 @@ const homeActivities = [
     "Paint candles",
     "Bake cinnamon buns.",
     "Have a movie marathon with Nordic winter films.",
-    "Plan your dream vacation for next year.",
     "Have a winter self-care day with face masks and a long bath.",
     "Make homemade candles.",
     "Experiment with making your own bread, like sourdough or rye.",
@@ -142,6 +141,14 @@ const homeActivities = [
     "Try brewing your own kombucha or fermenting vegetables.",
     "Bake a pie with seasonal fruits like apples or pears.",
     "Make chocolate balls.",
+    "Create your own hot drink recipe—experiment with spices, syrups, and toppings.",
+    "Learn how to fold fancy napkins for future dinner parties.",
+    "Make homemade pasta from scratch.",
+    "Make your own milkshake.",
+    "Learn origami and make a collection of folded paper creations.",
+    "Set up a mini home science experiment (like making slime).",
+    "Make your own marshmallows to add to hot chocolate."
+    "Plan your dream vacation and research all the fun things to do there.",
 ];
 
 // Default activities and slider position
