@@ -147,3 +147,13 @@ hr {
     color: #fff;
 }
 
+/* Default option styles */
+.toggle-option {
+    color: #fff; /* Default text color */
+}
+
+/* Highlight the selected option */
+.toggle-option.selected {
+    color: #fff; /* Darker text for selected option */
+    font-weight: bold; /* Makes the selected option stand out */
+}
