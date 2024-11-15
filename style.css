@@ -39,7 +39,9 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%; /* Makes button stretch to full width */
     transition: background-color 0.3s ease;
+    text-align: center; /* Ensures text stays centered */
 }
 
 button:hover {
@@ -73,7 +75,9 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%; /* Makes button stretch to full width */
     transition: background-color 0.3s ease;
+    text-align: center; /* Ensures text stays centered */
 }
 
 #followButton:hover {
