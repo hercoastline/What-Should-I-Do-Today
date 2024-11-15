@@ -1,8 +1,3 @@
-// Get references to toggle elements
-const toggleSlider = document.getElementById("toggle-slider");
-const turkuOption = document.getElementById("turkuOption");
-const archipelagoOption = document.getElementById("archipelagoOption");
-
 // Activities for Turku and Archipelago
 const turkuActivities = [
     "Go to Ikea",
@@ -103,17 +98,37 @@ const archipelagoActivities = [
     "Try making your own glögi (mulled wine) at home",
 ];
 
-// Default to Turku Edition
+const homeActivities = [
+    "Bake cookies at home",
+    "Host a mini cook-off with friends",
+    "Do a puzzle",
+    "Paint candles",
+    "Write a thank-you letter to someone you appreciate",
+    "Have a cozy movie night with blankets and popcorn",
+    "Make homemade hot chocolate",
+    "Try knitting or crocheting a simple project",
+    "Organize a small area of your home",
+    "Start a journal and write about your day"
+];
+
+// Default activities and slider position
 let activities = turkuActivities;
+const toggleSlider = document.getElementById("toggle-slider");
+const turkuOption = document.getElementById("turkuOption");
+const archipelagoOption = document.getElementById("archipelagoOption");
+const homeOption = document.getElementById("homeOption");
 
 // Function to switch editions
 function switchEdition(edition) {
     if (edition === "Turku") {
-        toggleSlider.style.left = "0"; // Move slider to the left
-        activities = turkuActivities; // Update activities
-    } else {
-        toggleSlider.style.left = "50%"; // Move slider to the right
-        activities = archipelagoActivities; // Update activities
+        toggleSlider.style.left = "0"; // Slider to the first position
+        activities = turkuActivities;
+    } else if (edition === "Archipelago") {
+        toggleSlider.style.left = "33.33%"; // Slider to the middle position
+        activities = archipelagoActivities;
+    } else if (edition === "Home") {
+        toggleSlider.style.left = "66.66%"; // Slider to the third position
+        activities = homeActivities;
     }
     document.getElementById("activityIdea").textContent = ""; // Clear activity
     document.getElementById("activityButton").textContent = "Tell me what to do";
@@ -123,15 +138,12 @@ function switchEdition(edition) {
 function displayNewIdea() {
     const randomIdea = activities[Math.floor(Math.random() * activities.length)];
     document.getElementById("activityIdea").textContent = randomIdea;
-    document.getElementById("activityButton").textContent = "Give me another idea :)";
+    document.getElementById("activityButton").textContent = "Not today, give me another idea";
 }
 
-// Add event listeners for edition switch
+// Add event listeners for edition switches
 turkuOption.addEventListener("click", () => switchEdition("Turku"));
 archipelagoOption.addEventListener("click", () => switchEdition("Archipelago"));
-document.getElementById("activityButton").addEventListener("click", displayNewIdea);
-
-// Add event listeners
-editionToggle.addEventListener("change", updateEdition);
+homeOption.addEventListener("click", () => switchEdition("Home"));
 document.getElementById("activityButton").addEventListener("click", displayNewIdea);
 
